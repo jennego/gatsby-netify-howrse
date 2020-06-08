@@ -52,15 +52,15 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Intro, name: intro, widget: markdown}
-          - label: "Dvine Page"
+          - label: "Divine Page"
             name: "divines"
             file: "site/content/divines.yml"
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Intro, name: intro, widget: markdown}
           - label: "Home Text"
-            name: "divines"
-            file: "site/content/divines.yml"
+            name: "home"
+            file: "site/content/home.yml"
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Intro, name: intro, widget: markdown}

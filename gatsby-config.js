@@ -34,13 +34,13 @@ module.exports = {
         name: `coats`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/divines`,
-        name: `divines`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/divines`,
+    //     name: `divines`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
