@@ -1,17 +1,16 @@
 backend:
   name: github
-  ## Set to false to prevent transforming images in media gallery view
   repo: jennego/gatsby-howrse
   branch: master # Branch to update (optional; defaults to master)
-
+  site_domain: https://purplehowrses.netlify.app
 media_library:
   name: cloudinary
   config:
     cloud_name: purplepony
     api_key: 351636599549869
 
-public_folder: /assets
-media_folder: /static/assets
+public_folder: "/public/assets"
+media_folder: "/static/assets"
 
 collections:
   - name: "coats" # Used in routes, e.g., /admin/collections/blog
@@ -42,6 +41,7 @@ collections:
             "yellow",
             "green",
             "blue",
+            "purple",
             "unicorn",
             "pegasus",
             "riding horse",
