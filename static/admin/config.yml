@@ -67,25 +67,25 @@ collections:
     files:
       - label: "About Page"
         name: "about"
-        file: "site/content/about.yml"
+        file: "content/about.yml"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
       - label: "Coats Page"
         name: "coats"
-        file: "site/content/coats.yml"
+        file: "content/coats.yml"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
       - label: "Divine Page"
         name: "divines"
-        file: "site/content/divines.yml"
+        file: "content/divines.yml"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
       - label: "Home Text"
         name: "home"
-        file: "site/content/home.yml"
+        file: "content/home.yml"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
