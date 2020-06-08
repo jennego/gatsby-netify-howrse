@@ -1,39 +1,67 @@
 backend:
-  name: gatsby-howrse
+  name: github
+  ## Set to false to prevent transforming images in media gallery view
+  repo: jennego/gatsby-howrse
   branch: master # Branch to update (optional; defaults to master)
 
-load_config_file: false
-media_folder: static/assets
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: purplepony
+    api_key: 351636599549869
+
 public_folder: /assets
 
 collections:
   - name: "coats" # Used in routes, e.g., /admin/collections/blog
     label: "Golden Apple" # Used in the UI
-    folder: "_content/coats" # The path to the folder where the documents are stored
+    folder: "content/coats" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Notes", name: "notes", widget: "text" }
-      - { label: "Limited?", name: "limited", widget: "bootlean" }
-      - { label: "User Number", name: "use", widget: "number" }
+      - { label: "Notes", name: "notes", widget: "text", required: false }
+      - { label: "Limited?", name: "limited", widget: "boolean", default: true }
+      - { label: "Use Number", name: "use", widget: "number", required: false }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["purple"] }
   - name: "divines" # Used in routes, e.g., /admin/collections/blog
     label: "Divines" # Used in the UI
-    folder: "_content/divines" # The path to the folder where the documents are stored
+    folder: "content/divines" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Notes", name: "notes", widget: "text" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["purple"] }
-  - name: "page-info"
-    label: "page-info"
-    folder: "_content/text"
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Intro, name: intro, widget: markdown }
+    - label: "Pages"
+        name: "pages"
+        files:
+          - label: "About Page"
+            name: "about"
+            file: "site/content/about.yml"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Intro, name: intro, widget: markdown}
+          - label: "Coats Page"
+            name: "coats"
+            file: "site/content/coats.yml"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Intro, name: intro, widget: markdown}
+          - label: "Dvine Page"
+            name: "divines"
+            file: "site/content/divines.yml"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Intro, name: intro, widget: markdown}
+          - label: "Home Text"
+            name: "divines"
+            file: "site/content/divines.yml"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Intro, name: intro, widget: markdown}
+              - {label: Section1, name: section1, widget: markdown}
