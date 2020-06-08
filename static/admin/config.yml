@@ -45,7 +45,7 @@ collections:
             "sea",
             "space",
           ]
-        default: ["purple"]
+        default: "purple"
   - name: "divines" # Used in routes, e.g., /admin/collections/blog
     label: "Divines" # Used in the UI
     folder: "content/divines" # The path to the folder where the documents are stored

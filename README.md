@@ -17,4 +17,4 @@ This site uses
 - Netlify for hosting
 - Cloudinary for image uploads
 
-It has provisions
+It has provisions for tagging but I'm not dealing with that yet.

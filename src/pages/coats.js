@@ -9,16 +9,16 @@ const Coats = () => {
       allFile(filter: { sourceInstanceName: { eq: "coats" } }) {
         edges {
           node {
+            id
             childMarkdownRemark {
               frontmatter {
                 image
                 limited
-                intro
+                link
+                notes
                 tags
                 title
                 use
-                link
-                notes
               }
             }
           }
