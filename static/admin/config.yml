@@ -11,6 +11,7 @@ media_library:
     api_key: 351636599549869
 
 public_folder: /assets
+media_folder: /static/assets
 
 collections:
   - name: "coats" # Used in routes, e.g., /admin/collections/blog
@@ -22,7 +23,12 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Notes", name: "notes", widget: "text", required: false }
-      - { label: "Limited?", name: "limited", widget: "boolean", default: true }
+      - {
+          label: "Limited?",
+          name: "limited",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Use Number", name: "use", widget: "number", required: false }
       - { label: "Link", name: "link", widget: "string" }
       - label: "Tags"
@@ -56,7 +62,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Notes", name: "notes", widget: "text" }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["purple"] }
   - label: "Pages"
     name: "pages"
     files:
