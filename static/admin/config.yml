@@ -25,7 +25,27 @@ collections:
       - { label: "Limited?", name: "limited", widget: "boolean", default: true }
       - { label: "Use Number", name: "use", widget: "number", required: false }
       - { label: "Link", name: "link", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["purple"] }
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options:
+          [
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "unicorn",
+            "pegasus",
+            "riding horse",
+            "pony",
+            "draft",
+            "donkey",
+            "sea",
+            "space",
+          ]
+        default: ["purple"]
   - name: "divines" # Used in routes, e.g., /admin/collections/blog
     label: "Divines" # Used in the UI
     folder: "content/divines" # The path to the folder where the documents are stored
@@ -37,31 +57,31 @@ collections:
       - { label: "Notes", name: "notes", widget: "text" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["purple"] }
-    - label: "Pages"
-        name: "pages"
-        files:
-          - label: "About Page"
-            name: "about"
-            file: "site/content/about.yml"
-            fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Intro, name: intro, widget: markdown}
-          - label: "Coats Page"
-            name: "coats"
-            file: "site/content/coats.yml"
-            fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Intro, name: intro, widget: markdown}
-          - label: "Divine Page"
-            name: "divines"
-            file: "site/content/divines.yml"
-            fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Intro, name: intro, widget: markdown}
-          - label: "Home Text"
-            name: "home"
-            file: "site/content/home.yml"
-            fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Intro, name: intro, widget: markdown}
-              - {label: Section1, name: section1, widget: markdown}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "site/content/about.yml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+      - label: "Coats Page"
+        name: "coats"
+        file: "site/content/coats.yml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+      - label: "Divine Page"
+        name: "divines"
+        file: "site/content/divines.yml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+      - label: "Home Text"
+        name: "home"
+        file: "site/content/home.yml"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: Section1, name: section1, widget: markdown }
