@@ -27,20 +27,20 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    // options: {
-    //   path: `${__dirname}/content/coats`,
-    //   name: `coats`,
-    // },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/content/divines`,
-    //     name: `divines`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/coats`,
+        name: `coats`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/divines`,
+        name: `divines`,
+      },
+    },
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
